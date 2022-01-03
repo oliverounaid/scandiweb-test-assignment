@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Add</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="text/javascript" src="./js/scripts.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Product Add</h1>
+    <nav class="nav">
+        <input class="headerBtn" type="submit" form="product_form" name="submit" id="submit" value="Save">
+        <a class="headerBtn" href="./index.php">Cancel</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <form id="product_form" action="add.php" method="POST">
+        <label class="prodlabel" for="SKU">SKU </label>
+        <input class="prodinput" title="Please enter unique product SKU." type="text" id="sku" name="sku" maxlength="24" pattern="[A-Za-z0-9]+" required=""><br>
+        <label class="prodlabel" for="name">Name </label>
+        <input class="prodinput" title="Please enter product name." type="text" id="name" name="name" maxlength="12" required=""><br>
+        <label class="prodlabel" for="price">Price ($) </label>
+        <input class="prodinput" title="Please enter product price." type="number" id="price" name="price" min="0.00" max="10000.00" step="0.01" required=""><br>
+        <label class="prodlabel" for="productType">Type </label>
+        <select class="prodinput" id="productType" name="productType" size="1" required onchange="checkInput(this)">
+          <option value="" selected disabled>Choose one:</option>
+          <option value="DVD">DVD-disc</option>
+          <option value="Book">Book</option>
+          <option value="Furniture">Furniture</option>
+      </select><br>
+      <div id="DVD" style="display: none;">
+        <label class="prodlabel" for="DVD">Size (MB) </label>
+        <input class="prodinput" type="number" id="size" name="size" min="1" max="8540" maxlength="4"><br>
+        <strong>Please provide disc space in MB.</strong>
+      </div>
+
+      <div id="Book" style="display: none;">
+        <label class="prodlabel" for="Book">Weight (KG) </label>
+        <input class="prodinput" type="number" id="weight" name="weight" min="1" max="9999" maxlength="4"><br>
+        <strong>Please provide weight in Kg.</strong>
+      </div>
+
+      <div id="Furniture" style="display: none;">
+        <label class="prodlabel" for="Height">Height (CM) </label>
+        <input class="prodinput" type="number" id="height" name="height" min="1" max="999" maxlength="3"><br>
+        <label class="prodlabel" for="Width">Width (CM) </label>
+        <input class="prodinput" type="number" id="width" name="width" min="1" max="999" maxlength="3"><br>
+        <label class="prodlabel" for="Length">Length (CM) </label>
+        <input class="prodinput" type="number" id="length" name="length" min="1" max="999" maxlength="3"><br>
+        <strong>Please provide dimensions in HxWxL format.</strong>
+      </div>
+
+
+    </form>
+
+  </main>
+
+
+
+  <footer class="footer">
+    <p>
+      ScandiWeb Test assignment
+    </p>
+  </footer>
+</body>
+
+</html>

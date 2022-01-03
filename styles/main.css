@@ -1,0 +1,41 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  padding: 50px;
+  min-height: 36vw;
+}
+/* Product List styling  */
+.productList {
+display: flex;
+flex-wrap: wrap;
+}
+.product {
+  border: 1px solid #000;
+  background-color: #c0c0c0;
+  width: 200px;
+  margin:10px;
+}
+.product > p {
+  text-align: center;
+  margin: 2px;
+}
+/* Product Add styling  */
+#product_form {
+  background-color: #c0c0c0;
+  width: 330px;
+  box-sizing: border-box;
+}
+#product_form > div{
+  padding: 0;
+}
+.prodlabel {
+  font-size: large;
+  padding:15px;
+}
+.prodinput {
+  float:right;
+  width:150px;
+}
