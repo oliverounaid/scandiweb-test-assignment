@@ -1,2 +1,2 @@
 # scandiweb-test-assignment
-Test assignment for Scandiweb
+URL : https://scandiweb.ta21ounaid.itmajakas.ee/
